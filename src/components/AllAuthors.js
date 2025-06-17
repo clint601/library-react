@@ -1,5 +1,5 @@
 
-import Header from "./Header"
+
 import AuthorCard from "./AuthorCard"
 
 
@@ -25,7 +25,7 @@ const AllAuthors =({ authors })=> {
     return(
         <main className="main" id="allHeroesMain">
             <div className="container">
-                { <Header />}
+                
                 <section className="row row-cols-1 row-cols-md-4 row-cols-lg-5 g-4 mt-5">
                     { AuthorComponents }
                 </section>

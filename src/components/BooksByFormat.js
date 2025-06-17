@@ -5,18 +5,23 @@ import axios from "axios"
 import BooksCard from "./BooksCard"
 
 
-const BooksByGenre =()=> {
 
-    const [ bookgenre, setBookGenre ] = useState([])
+
+const BooksByFormat =()=> {
+
+    
+
+
+    const [ bookformat, setBookFormat ] = useState([])
 
     const params = useParams()
 
     useEffect(()=> {
-    const url = `http://localhost:3005/api/genre/genre/${params.id}`
-    axios.get(url).then(res => setBookGenre(res.data))
+    const url = `http://localhost:3005/api/format/format/${params.id}`
+    axios.get(url).then(res => setBookFormat(res.data))
 }, [params.id])
 
-    const BookCardComponents = bookgenre.map(book => {
+    const BookCardComponents = bookformat.map(book => {
         return (
             <BooksCard
                 key={book.book_id}
@@ -30,6 +35,7 @@ const BooksByGenre =()=> {
         return (
         <main className="main" id="allBooksMain">
             <div className="container">
+                
                 <section className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-5">
                     { BookCardComponents }
                 </section>
@@ -38,7 +44,9 @@ const BooksByGenre =()=> {
     )
 
 
-
 }
 
-export default BooksByGenre
+
+
+
+export default BooksByFormat

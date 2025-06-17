@@ -42,7 +42,7 @@ const BooksByAuthor =()=> {
     return (
         <main className="main" id="main">
             <div className="container">
-                { <Header />}
+                <h2 className="text-capitalize text-capitalize">books by author</h2>
                 <section className="row row-cols-1 row-cols-md-4 row-cols-lg-5 g-4 mt-5">
                     { cardComponents }
                 </section>

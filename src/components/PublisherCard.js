@@ -15,7 +15,7 @@ const PublisherCard =(props)=> {
                 </div>
                 
             <footer className="card-footer">
-                    View <Link to={`/author/${props.id}`} className="bookSingle-link link-unstyled">books</Link> by this Publisher
+                    View <Link to={`/publisher/${props.id}`} className="bookSingle-link link-unstyled">books</Link> by this Publisher
                 </footer>
             </div>
         </div>
