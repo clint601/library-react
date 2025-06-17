@@ -7,26 +7,26 @@ const BookForm =(props)=> {
     const [ species, setSpecies ] = useState([])
 
     useEffect(()=> {
-        const franUrl = 'http://localhost:3005/api/franchise'
-        const specUrl = 'http://localhost:3005/api/species'
+        const authUrl = 'http://localhost:3005/api/author'
+        // const specUrl = 'http://localhost:3005/api/species'
 
-        axios.get(franUrl).then(res => setFranchises(res.data))
-        axios.get(specUrl).then(res => setSpecies(res.data))
+        axios.get(authUrl).then(res => setAuthors(res.data))
+        // axios.get(specUrl).then(res => setSpecies(res.data))
     }, [])
 
-    const franchiseDivs = franchises.map(franchise => {
+    const Authorbk = authors.map(author => {
         return (
-            <div className="form-check form-check-inline" key={franchise.franchise_id}>
+            <div className="form-check form-check-inline" key={author.author_id}>
                 <input
                     className="form-check-input"
                     type="radio"
-                    name="franchise_id"
-                    defaultValue={franchise.franchise_id}
-                    id={franchise.franchise}
+                    name="author_id"
+                    defaultValue={author.author_id}
+                    id={author.author}
                     onChange={props.handleChange}
                 />
-                <label className="form-check-label" htmlFor={franchise.franchise}>
-                    {franchise.franchise}
+                <label className="form-check-label" htmlFor={author.author}>
+                    {author.author}
                 </label>
             </div>
         )
@@ -113,7 +113,7 @@ const BookForm =(props)=> {
                         <div className="col">
                             <div className="franchise-box">
                                 <p className="form-text">Franchise</p>
-                                { franchiseDivs }
+                                { Authorbk }
                             </div>
                         </div>
                     </div>
@@ -121,7 +121,7 @@ const BookForm =(props)=> {
                         <div className="col">
                             <div className="species-box">
                                 <p className="form-text">Species</p>
-                                { speciesDivs }
+                                {/* { speciesDivs } */}
                             </div>
                         </div>
                     </div>
