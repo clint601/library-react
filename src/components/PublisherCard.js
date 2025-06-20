@@ -8,7 +8,7 @@ const PublisherCard =(props)=> {
     return (
         <div className="col">
             <div className="card author-card h-100">
-                <img src="https://placehold.co/50x50"alt="placeholder img" class="img-fluid image" />
+                <img src={`/images/${props.img_url}`}alt={props.publisher} className="img-fluid image card-img-top h-100" />
                 
                 <div className="card-body">
                     <h2 className="card-title text-capitalize">{props.title}</h2>

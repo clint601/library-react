@@ -10,7 +10,10 @@ const Nav = () => {
             <Link to="/" class="nav-link">Home</Link>
           </li> */}
           <li className="nav-item top-nav ">
-            <Link to="/" className="nav-link">All Books</Link>
+            <Link to="/" className="nav-link">Home</Link>
+          </li>
+          <li className="nav-item top-nav ">
+            <Link to="book" className="nav-link">All Books</Link>
           </li>
           <li className="nav-item list-styled">
             <Link to="/author" className="nav-link">Authors</Link>

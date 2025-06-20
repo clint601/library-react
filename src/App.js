@@ -16,6 +16,7 @@ import AllPublisher from "./components/AllPublisher";
 import BooksByGenre from "./components/BooksByGenre";
 import BooksByFormat from "./components/BooksByFormat";
 import BookForm from "./components/BookForm";
+import Home from "./components/Home";
 
 
 
@@ -137,10 +138,11 @@ useEffect(()=> {
         <>
         <Header />
         <Routes>
-            
-
-            <Route path="/" element={ <AllBooks books={books} />} />
+            <Route path="book" element={ <AllBooks books={books} />} />
             <Route path="/book/:id" element={ <BookSingle /> } />
+            
+            <Route path="/" element={ <Home  resetData={ resetData } />} />
+
 
             <Route path="/author" element={ <AllAuthors authors={authors} />} />
             <Route path="/author/:id" element={ <BooksByAuthor />} />
