@@ -31,6 +31,10 @@ const BookSingle =()=> {
         return <li key={ format } className="list-item format-item">{ format }</li>
     })
 
+
+
+
+
     return (
         
         <main className="main" id="bookSingle">
@@ -38,7 +42,7 @@ const BookSingle =()=> {
                 <div className="row">
                     <div className="col">
                         <h2 className="book-single-heading text-capitalize book-title">{book.title}</h2>
-                        <img src={`/images/${book.cover_image}`} alt={book.title} className="img-fluid image card-img-top w-50" />
+                        <img src={`/images/${book.cover_image}`} alt={book.title} className="img-fluid image card-img-top book-cover" />
                         
                     </div>
                     <div className="col">
@@ -51,7 +55,9 @@ const BookSingle =()=> {
                             <li className="list-group-item">Edition Year: {`${book.edition_year}`}</li>
                             <li className="list-group-item">Binding: {`${book.binding}`}</li>
                             <li className="list-group-item">Language: {`${book.language}`}</li>
+                            <li className="list-group-item">Rating: {`${book.rating}`}</li>
                             <li className="list-group-item">Num of Pages: {`${book.num_pages}`}</li>
+                            <li className="list-group-item">Quantity: {`${book.qty}`}</li>
                             { genres.length && <li className="list-group-item">
                                 Genres:
                                 <ul className="genres-list">

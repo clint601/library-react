@@ -6,11 +6,11 @@ const Nav = () => {
       <div className="d-flex justify-content-end">
         <img src="images/lo.jpeg" className="header-img w-50 img-" />
         <ul className="top-nav d-flex align-items-center text-uppercase gap-4 list-unstyled m-0">
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to="/" class="nav-link">Home</Link>
-          </li>
+          </li> */}
           <li className="nav-item top-nav ">
-            <Link to="/book" className="nav-link">All Books</Link>
+            <Link to="/" className="nav-link">All Books</Link>
           </li>
           <li className="nav-item list-styled">
             <Link to="/author" className="nav-link">Authors</Link>

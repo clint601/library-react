@@ -17,8 +17,6 @@ const AllBooks =({ books })=> {
             id={book.book_id}
             title={book.title}
             cover_image={book.cover_image}
-            
-            
             />
         )
     })

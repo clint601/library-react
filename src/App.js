@@ -6,7 +6,6 @@ import { useParams } from "react-router"
 
 
 import Header from "./components/Header";
-import Main from "./components/Main";
 import Footer from "./components/Footer";
 import AllBooks from "./components/AllBooks";
 import BookSingle from "./components/BookSingle";
@@ -71,13 +70,14 @@ useEffect(()=> {
             title: '',
             author_id: 0,
             publisher_id: 0,
-            copyright_year: '',
+            copyright_year: 1900,
             edition: '',
-            edition_year: '',
+            edition_year: 1900,
             binding: '',
-            rating: '',
+            rating: 1,
             language: '',
             num_pages: '',
+            qty: 1,
             cover_image: ''
     })
 
@@ -96,20 +96,21 @@ useEffect(()=> {
             title: '',
             author_id: 0,
             publisher_id: 0,
-            copyright_year: '',
+            copyright_year: 1900,
             edition: '',
-            edition_year: '',
+            edition_year: 1900,
             binding: '',
-            rating: '',
+            rating: 1,
             language: '',
             num_pages: '',
+            qty: 1,
             cover_image: ''
         })
     }
 
     const handleSubmit =(e)=> {
         e.preventDefault()
-        // console.log(formData)
+        console.log(formData)
 
         axios({
             method: 'post',
@@ -136,9 +137,9 @@ useEffect(()=> {
         <>
         <Header />
         <Routes>
-            <Route path="/" element={ <Main />} />
+            
 
-            <Route path="/book" element={ <AllBooks books={books} />} />
+            <Route path="/" element={ <AllBooks books={books} />} />
             <Route path="/book/:id" element={ <BookSingle /> } />
 
             <Route path="/author" element={ <AllAuthors authors={authors} />} />
